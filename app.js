@@ -7,6 +7,10 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var getPaymentInfo = require('./routes/getPaymentInfo');
+var getOrderInfo = require('./routes/getOrderInfo');
+var generateInvoice = require('./routes/generateInvoice');
+var updateInvoice = require('./routes/updateInvoice');
 
 var app = express();
 
@@ -24,6 +28,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/getPaymentInfo', getPaymentInfo);
+app.use('/getOrderInfo', getOrderInfo);
+app.use('/generateInvoice', generateInvoice);
+app.use('/updateInvoice', updateInvoice);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

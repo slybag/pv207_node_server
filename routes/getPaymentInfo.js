@@ -4,10 +4,10 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
- /* res.set('Content-Type', 'text/xml');
-  var xmlFile = '<lat>38</lat>';*/
+     res.set('Content-Type', 'text/xml');
+     var xmlFile = '<payment>True</payment>';
 
-  res.send('ahoj');
+    res.send(xmlFile);
 });
 
 module.exports = router;
