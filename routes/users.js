@@ -3,7 +3,8 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  res.setHeader('Content-Type', 'application/json');
+  res.send(JSON.stringify({ seat: ['1a', '1b', '1c', '1d'] }));
 });
 
 module.exports = router;
